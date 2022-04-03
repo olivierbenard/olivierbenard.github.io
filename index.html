@@ -1,3 +1,114 @@
 <html>
-    <a href="https://olivierbenard.fr">olivierbenard.fr</a>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="en">
+    <meta name="author" content="Olivier Bénard">
+    <meta name="description" content="Olivier Bénard's home page">
+    <meta name="keywords" content="olivier bénard,blog,data,scientist,software,engineer,it">
+    <!-- Thumbnail Preview Link  -->
+    <meta property="og:title" content="Olivier Bénard">
+    <meta property="og:description" content="Olivier Bénard's home page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://olivierbenard.fr">
+    <meta property="og:image" content="static/images/portrait.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olivier Bénard</title>
+    <script src="https://kit.fontawesome.com/605f20179e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type= "text/css" href="static/css/index.css">
+
+    <link rel="shortcut icon" href="static/images/favicon.ico">
+  </head>
+
+  <body>
+    <div class="content">
+      <img id="portrait" class="portrait" src="static/images/portrait.png" alt="Olivier Bénard" onclick="switcher()">
+      <h1 class="name">Olivier Bénard</h1>
+      <h2 class="pseudo">Software Engineer in Data Science</h2>
+      <p class="desc">
+        <ul class="text">
+          <li>My main skills are in Software Engineering and Computer Science. You can check all my ongoing IT projects on <a href="https://github.com/olivierbenard" target="_blank"><a href="https://github.com/olivierbenard" target="_blank">GitHub</a>.</li>
+          <li>Since 2016, I worked in New-York, Paris, London and Stuttgart for different managements. I speak 3 languages and developed a network and a full cultural overview.</li>
+          <li>Over 4 years, I managed working units, trained peers and directed technical interviews. I have a clear in-depth understanding of the interactions at stake within a group.</li>
+          <li>If you want to be in touch, drop me a line!</li>
+        </ul>
+      </p>
+        <ul class="links">
+          <li>
+            <a href="https://github.com/olivierbenard" target="_blank">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span class="link-icon-desc">GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/olivierbenard/" target="_blank">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <span class="link-icon-desc">Linkedin</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/olivierbenard" target="_blank">
+              <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+              <span class="link-icon-desc">Telegram</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="" target="_self">
+              <i class="fab fa-whatsapp" aria-hidden="true" style="cursor: not-allowed;"></i>
+              <span class="link-icon-desc">Whatsapp</span>
+            </a>
+          </li> -->
+          <li>
+            <div class="tooltip">
+              <button value="document.location" onclick="switcher();clipboard();" onmouseout="outfunction()">
+                <span class="tooltiptext" id="tooltip">Copy link to clipboard</span>
+                <i class="fas fa-share-alt" aria-hidden="true"></i>
+                <span class="link-icon-desc">QR code</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </body>
+
+  <script laguage="javascript">
+
+    function switcher() {
+
+      var portrait = document.getElementById("portrait");
+      var base_url = document.location.origin;
+
+      if (portrait.src == base_url + "/static/images/portrait.png") {
+        portrait.src = base_url + "/static/images/qrcode.png";
+        portrait.style.borderRadius = "0px";
+        portrait.style.opacity = 1;
+      }
+      else {
+        portrait.src = base_url + "/static/images/portrait.png";
+        portrait.style.borderRadius = "90px";
+        // portrait.style.opacity = 1;
+      }
+    }
+
+
+    function clipboard() {
+      // copy the base url in the navigator clipboard
+      var text = document.location.origin;
+      navigator.clipboard.writeText(text);
+
+      var tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = "Copied!";
+    }
+
+
+    function outfunction() {
+
+      // reinit the value
+      var tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = "Copy link to clipboard";
+
+    }
+
+  </script>
+
 </html>
