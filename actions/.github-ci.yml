@@ -1,0 +1,5 @@
+black:
+  stage: prod
+  image: registry.github.com/pipeline-components/black:latest
+  script:
+    - black --check --verbose -- .
