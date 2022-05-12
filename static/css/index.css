@@ -153,13 +153,31 @@ a:link, a:visited {
 }
 
 a:hover, button:hover {
-    /* color: #000; */
     color:rgba(0,0,0,0.6);
     opacity: 0.8;
 }
+
+#special_link:link, #special_link:visited {
+  text-decoration: underline;
+  color: #A4A5A4;
+}
+
+#uncover_button {
+  text-decoration: underline;
+}
+
+/* #special_link:hover, #special_link:visited {
+  color: red;
+} */
 
 .fab:hover {
   color:rgba(0,0,0,0.6);
   opacity: 0.8;
   text-decoration: none;
+}
+
+.covered_text {
+  display: none;
+  opacity: 1;
+  color: #A4A5A4;
 }
