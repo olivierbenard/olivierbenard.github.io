@@ -1,5 +1,5 @@
 # Professional Website
 
-Professional website for companies, recruiters and all IT contributors/contributions.
+Landing page for workshop participants, conference listeners and companies.
 
 Website accessible here: [https://olivierbenard.github.io/](https://olivierbenard.github.io/)
