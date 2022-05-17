@@ -1,5 +1,5 @@
 # Professional Website
 
-Landing page for workshop participants, conference listeners and companies.
+Landing page where workshop participants, conference listeners, exhibition attendants and companies can be redirected to.
 
 Website accessible here: [https://olivierbenard.github.io/](https://olivierbenard.github.io/)
