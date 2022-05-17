@@ -160,7 +160,7 @@ a:hover, button:hover {
 
 #special_link:link, #special_link:visited {
   text-decoration: underline;
-  color: #A4A5A4;
+  color: black;
 }
 
 #uncover_button {
@@ -180,5 +180,7 @@ a:hover, button:hover {
 .covered_text {
   display: none;
   opacity: 1;
-  color: #A4A5A4;
+  color: black;
+  font-size: 0.9em;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
